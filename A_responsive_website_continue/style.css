@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+nav{
+    display:flex;
+    background-color:rgb(13, 14, 14);
+    height: 80px;
+    width:100%;
+    justify-content: space-between;
+    padding: 0px 50px 0px 80px;  /*......... 2 sides gap ..........*/
+    align-items: center;
+}
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+nav ul{
+    display:flex;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 8px;   /*.........for gap.........*/
+}
+nav ul li a{
+     text-decoration: none;
+     color: white;
+     font-size: 18px;
+     font-weight: 700;
+     padding: 7px 13px;
+     border-radius: 3px;
+     transition: 0.5s;
+     text-transform: uppercase;
+
+}
+nav ul li a:hover, nav ul li a.active{
+    background-color:rgb(190, 118, 118);
+}
+.btn{
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display:none;
+}
+#click{
+    display: none;
+}
+
+/*..... Responsive ..................................................*/
+
+@media only screen and (max-width: 940px) {
+    .btn{
+        display: block;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    #click:checked ~ .btn i::before{
+        content: "\f057";
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        padding:20px;
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(13, 14, 14);
+        flex-direction: column;
+        text-align: center;
+        transition: all 0.5s ease;
+
+     }
+     nav ul li{
+        margin: 30px 0;
+     }
+     nav ul li a{
+        font-size: 22px;
+     }
+     nav ul li a:hover, nav ul li a.active {
+        background: none;
+        color: red;
+     }
+     
+}
+/*..... Responsive ..................................................*/
+
+header{
+    background-image: url("images/image1.jpeg");
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/*.....................section-1..............*/   
+
+#section-1{
+    background-color:rgb(41, 116, 132);
+}
+
+#main-column{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); /*.....for 3, 3columns hobe.....*/
+   width: 1100px;
+   margin: 0 auto; /*.....majhkhane chole asbe, upore-niche 0 and 2 sides auto......*/
+   gap:25px;
+   padding-bottom: 100px;
+
+}
+.box{
+    background-color: white;
+    text-align: center;
+    color: black;
+    padding:30px 20px;  /*.......upore-niche 30px, 2sides 20px......*/
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px red;
+    border: 3px solid black;
+
+}
+.box i{
+    font-size: 40px;
+}
+.box h1{
+    margin: 10px 0;
+    font-weight: bold;
+}
+.service{
+     text-align: center;
+     color: red;
+     font-weight: 200px;
+     padding: 50px 0;
+     letter-spacing: 0.2em;
+}
+
+
+
+/*.....................@media query 2nd part..............*/
+@media only screen and (max-width: 688px) {
+    #main-column{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        width: 100%;
+
+    }
+
+}
+
+@media only screen and (min-width: 689px) and (max-width:1099px) {
+    #main-column{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        width: 100%;
+
+    }
+}
+/*.....................@media query 2nd part end..............*/
+
+/*...............................................*/
+
+#second-section{
+    background-color:rgb(198, 137, 26);
+    }
+    
+    #smart-area{
+        display: flex;
+        justify-content: space-between;
+        /* display:grid;
+        grid-template-columns: repeat(2, 1fr); */
+        margin-left: 200px;
+        margin-right: 200px;
+        padding-bottom: 100px;
+    
+    }
+    .smart-area-text{
+        align-items: center;
+        color: white;
+        padding-left: 50px;
+        padding-top: 80px;
+    
+    }
+    .smart-area-text{
+        color: rgb(11, 83, 83);
+
+    }
+    .smart-area-h1{
+        text-align: center;
+        color:rgb(11, 83, 83);;
+        font-weight: 800px;
+        padding: 50px 0;
+        letter-spacing: 0.2em;
+   }
+   .smart-area-text a{
+    text-decoration: none;
+    font-size: 22px;
+    background-color:beige;
+    color: black;
+    padding: 10px 30px;
+    border-radius: 5px;
+   } 
+    /*.......................................................*/
+
+     /*.................... 3rd part @media query .................*/
+
+     @media only screen and (max-width: 688px){
+        #smart-area{
+            margin-left: 200px;
+            margin-right: 200px;
+            display: block;
+        
+    }
+
+     }
+
+     @media only screen and (min-width: 689px) and (max-width:1099px) {
+        #smart-area{
+            margin-left: 200px;
+            margin-right: 200px;
+            display: block;
+            padding-left: 100px;
+        
+    }
+    
+}
+
+    /*.................... 3rd part @media query end .................*/
+    
